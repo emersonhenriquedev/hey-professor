@@ -14,5 +14,14 @@
                 Cancel
             </x-button>
         </x-form>
+
+        <hr class="my-4 border-gray-700 border-dashed" >
+
+        <div class="mb-1 font-bold uppercase dark:text-gray-400">List of Questions</div>
+        <div class="space-y-4 dark:text-gray-400">
+            @foreach ($questions as $item)
+                <x-question :question="$item" />
+            @endforeach
+        </div>
     </x-container>
 </x-app-layout>
